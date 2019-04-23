@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UFC Expedition</string>
+    <string name="title_home">Home</string>
+    <string name="title_scan">Explorar</string>
+    <string name="title_search">Pesquisar</string>
+    <string name="title_profile">Perfil</string>
+    <string name="lorem_ipsum">xx</string>
+</resources>
