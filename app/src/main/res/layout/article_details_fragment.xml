@@ -8,43 +8,45 @@
         tools:context=".fragment.ArticleDetailsFragment"
         >
 
-    <ImageView
-            android:layout_width="0dp"
-            android:layout_height="275dp"
-            tools:src="@tools:sample/backgrounds/scenic"
-            android:id="@+id/imageView"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/imgdefault"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-            android:text="@string/app_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/article-title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"/>
-
-    <TextView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp"
-            android:id="@+id/article-body"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/article-title"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:text="@string/lorem_ipsum"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="8dp"
-            tools:text="@tools:sample/lorem/random"/>
+            <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="275dp"
+                    tools:src="@tools:sample/backgrounds/scenic"
+                    android:id="@+id/imageView"
+                    android:scaleType="centerInside"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/imgdefault"/>
+            <TextView
+                    android:text="@string/app_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/article-title"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/article-body"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:text="@string/lorem_ipsum"
+                    tools:text="@tools:sample/lorem/random"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/article-title"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
