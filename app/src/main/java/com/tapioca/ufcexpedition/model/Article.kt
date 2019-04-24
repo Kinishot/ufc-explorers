@@ -1,5 +1,8 @@
 package com.tapioca.ufcexpedition.model
 
+/**
+ * Classe modelo para o artigo
+ */
 data class Article(var title: String, var body: String) {
 
     // companion object com ID estático, autoincrementado no init

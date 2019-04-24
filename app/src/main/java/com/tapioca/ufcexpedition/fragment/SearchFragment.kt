@@ -36,6 +36,7 @@ class SearchFragment : Fragment() {
         val file = context!!.resources.assets.open("data.json")
         val articles = Klaxon().parseArray<Article>(file)!!
 
+        // Configura o RecyclerView
         article_listview.apply {
             layoutManager = LinearLayoutManager(activity)
             adapter = SearchListAdapter(articles, activity as AppCompatActivity)

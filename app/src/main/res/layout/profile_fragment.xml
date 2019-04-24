@@ -5,27 +5,48 @@
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent">
 
-    <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:id="@+id/profile-pic"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="88dp"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:srcCompat="@drawable/ic_person_black_24dp"
-            tools:srcCompat="@tools:sample/avatars"/>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/scrollView3" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <TextView
-            android:text="Joãozinho Forrozeiro"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/profile-title"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/profile-pic"
-            app:layout_constraintStart_toStartOf="@+id/profile-pic"
-            app:layout_constraintEnd_toEndOf="@+id/profile-pic"
-            android:textAlignment="center"
-            tools:text="Joãozinho Forrozeiro"/>
+            <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:id="@+id/prof-pic"
+                    app:srcCompat="@drawable/ic_person_black_24dp"
+                    tools:srcCompat="@tools:sample/avatars"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="88dp" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp"/>
+            <TextView
+                    android:text="Joãozinho Forrozeiro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/prof-title"
+                    android:textAlignment="center"
+                    tools:text="Joãozinho Forrozeiro"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/prof-pic"
+                    app:layout_constraintStart_toStartOf="@+id/prof-pic"
+                    app:layout_constraintEnd_toEndOf="@+id/prof-pic"
+            />
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="32dp"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="32dp"
+                    app:layout_constraintTop_toBottomOf="@+id/prof-title" android:layout_marginTop="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="32dp"
+                    android:id="@+id/prof-emblem-container">
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
